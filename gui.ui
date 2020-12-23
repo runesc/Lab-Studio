@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>695</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#top_bar, QWidget#left_bar{
+	background:   #f4f4f8;
+}
+
+QWidget#report{
+	background-color:  green;
+}
+QWidget#config{
+	background-color: red;
+}
+
+QWidget#cloud{
+	background-color:blue;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="top_bar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>69</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="left_bar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>69</y>
+      <width>79</width>
+      <height>629</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="content">
+    <property name="geometry">
+     <rect>
+      <x>79</x>
+      <y>69</y>
+      <width>1121</width>
+      <height>629</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="report"/>
+    <widget class="QWidget" name="config"/>
+    <widget class="QWidget" name="cloud"/>
+   </widget>
+   <zorder>content</zorder>
+   <zorder>left_bar</zorder>
+   <zorder>top_bar</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

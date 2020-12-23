@@ -1,0 +1,17 @@
+/*! ahora es posible cambiar los estilos de la app desde una clase que hereda un componente*/
+MyApp{
+    background: #212121;
+}
+
+QWidget#top-bar, QWidget#left-bar{
+    background-color: #f4f4f8;
+}
+
+QWidget#bg-dark{
+    background: white;
+    color: white
+}
+
+QStackedWidget#content{
+    background-color: white;
+}
