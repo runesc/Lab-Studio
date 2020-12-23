@@ -27,6 +27,14 @@ QWidget#config{
 
 QWidget#cloud{
 	background-color:blue;
+}
+QWidget#first_setup{
+	background-color:#212121;
+}
+
+QLabel#title{
+	font-size: 40pt;
+	color: white;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -63,12 +71,84 @@ QWidget#cloud{
     <widget class="QWidget" name="config"/>
     <widget class="QWidget" name="cloud"/>
    </widget>
+   <widget class="QWidget" name="first_setup" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>695</height>
+     </rect>
+    </property>
+    <widget class="QStackedWidget" name="fist_stack">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1200</width>
+       <height>695</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="welcome">
+      <widget class="QLabel" name="title">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>150</y>
+         <width>1200</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Bienvenido a LabSudio</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="primary_btn">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>600</y>
+         <width>400</width>
+         <height>55</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>aceptar</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="host_config"/>
+     <widget class="QWidget" name="set_storage"/>
+     <widget class="QWidget" name="set_email"/>
+     <widget class="QWidget" name="start_link"/>
+    </widget>
+   </widget>
    <zorder>content</zorder>
    <zorder>left_bar</zorder>
    <zorder>top_bar</zorder>
+   <zorder>first_setup</zorder>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>primary_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>fist_stack</receiver>
+   <slot>raise()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>627</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>599</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
